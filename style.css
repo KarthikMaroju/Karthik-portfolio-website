@@ -1,98 +1,138 @@
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-background:#0f0f0f;
+}
+
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:white;
-transition:0.4s;
+overflow-x:hidden;
 }
 
-#particles-js{
-position:fixed;
+/* LOGIN */
+.login-container{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.login-card{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:20px;
+width:300px;
+text-align:center;
+box-shadow:0 0 40px rgba(0,0,0,0.5);
+animation:fadeIn 1.5s ease;
+}
+
+.login-card input{
 width:100%;
-height:100%;
-z-index:-1;
+margin:10px 0;
+padding:10px;
+border:none;
+border-radius:10px;
 }
 
-.toggle{
-position:fixed;
-right:20px;
-top:20px;
+.login-card button{
+padding:10px 20px;
+border:none;
+background:#ffb347;
+border-radius:20px;
 cursor:pointer;
-font-size:22px;
 }
 
+@keyframes fadeIn{
+from{opacity:0;transform:scale(0.8);}
+to{opacity:1;transform:scale(1);}
+}
+
+/* HERO */
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:80px 20px;
 }
 
 .profile-img{
 width:180px;
 border-radius:50%;
+box-shadow:0 0 30px #ffb347;
+transition:0.5s;
+}
+
+.profile-img:hover{
+transform:rotateY(20deg) scale(1.1);
+}
+
+.icons a{
+margin:10px;
+font-size:22px;
+color:white;
+transition:0.3s;
+}
+
+.icons a:hover{
+color:#ffb347;
+transform:scale(1.3);
 }
 
 .btn{
 display:inline-block;
-padding:10px 25px;
+margin-top:20px;
+padding:12px 25px;
 background:#ffb347;
-border-radius:25px;
+border-radius:30px;
 text-decoration:none;
 color:black;
-}
-
-.skills{
-padding:50px 20%;
-}
-
-.bar{
-background:#333;
-height:8px;
-border-radius:10px;
-}
-
-.progress{
-height:8px;
-background:#ff6b6b;
-border-radius:10px;
-animation:grow 2s ease;
-}
-
-@keyframes grow{
-from{width:0}
-}
-
-.project-card{
-background:#222;
-padding:20px;
-margin:20px;
-cursor:pointer;
 transition:0.4s;
 }
 
-.project-card:hover{
-transform:scale(1.05);
+.btn:hover{
+transform:scale(1.1);
 }
 
+/* PROJECT CARDS */
+.projects{
+padding:50px;
+text-align:center;
+}
+
+.card{
+display:inline-block;
+background:rgba(255,255,255,0.1);
+padding:30px;
+margin:20px;
+border-radius:20px;
+cursor:pointer;
+transition:0.4s;
+width:250px;
+}
+
+.card:hover{
+transform:rotateY(15deg) scale(1.05);
+background:rgba(255,255,255,0.2);
+}
+
+/* MODAL */
 .modal{
 display:none;
 position:fixed;
-background:rgba(0,0,0,0.8);
 width:100%;
 height:100%;
+background:rgba(0,0,0,0.8);
+top:0;
 }
 
-.modal-content{
+.modal-box{
 background:white;
 color:black;
 padding:30px;
-margin:10% auto;
 width:50%;
+margin:10% auto;
+border-radius:20px;
+animation:fadeIn 0.5s;
 }
-
-.cert-card{
-background:#333;
-padding:15px;
-margin:10px;
-}
-
-
