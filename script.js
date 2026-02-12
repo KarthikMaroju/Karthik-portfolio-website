@@ -1,34 +1,23 @@
-// Typing Effect
-const text = ["Software Engineer", "AI & ML Enthusiast", "Full Stack Developer"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type(){
-if(count === text.length){
-count = 0;
+// DARK MODE
+document.querySelector(".toggle").onclick = function(){
+document.body.classList.toggle("light");
 }
-currentText = text[count];
-letter = currentText.slice(0, ++index);
 
-document.querySelector(".typing").textContent = letter;
-if(letter.length === currentText.length){
-count++;
-index = 0;
+// PARTICLES
+particlesJS.load('particles-js','https://cdn.jsdelivr.net/particles.js/2.0.0/particles.json');
+
+// MODAL
+function openModal(id){
+document.getElementById(id).style.display="block";
 }
-setTimeout(type, 150);
-})();
 
-// Scroll Reveal
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll",()=>{
-cards.forEach(card=>{
-const top = card.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-card.style.opacity="1";
-card.style.transform="translateY(0)";
+function closeModal(id){
+document.getElementById(id).style.display="none";
 }
+
+// CONTACT FORM
+document.getElementById("contact-form").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Message Sent Successfully!");
 });
-});
+
