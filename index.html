@@ -3,125 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maroju Karthik | AI Engineer</title>
+<title>Karthik | 3D Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
 
+</head>
 <body>
 
-<div id="particles-js"></div>
-
-<!-- DARK LIGHT TOGGLE -->
-<div class="toggle">
-<i class="fa-solid fa-moon"></i>
+<!-- LOGIN SCREEN -->
+<div class="login-container" id="loginBox">
+    <div class="login-card">
+        <h2>Portfolio Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Enter Portfolio</button>
+        <p id="error"></p>
+    </div>
 </div>
 
+<!-- MAIN WEBSITE -->
+<div id="mainContent" style="display:none;">
+
 <nav>
-<h2>Karthik</h2>
-<ul>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#certifications">Certifications</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+    <h2>Karthik</h2>
 </nav>
 
 <section class="hero">
-<img src="assets/profile.jpg" class="profile-img">
-<h1>Maroju Karthik</h1>
-<p>Software Engineer | AI & ML</p>
+    <img src="assets/profile.jpg" class="profile-img">
+    <h1>Maroju Karthik</h1>
+    <p>Software Engineer | AI & ML</p>
 
-<a href="https://drive.google.com/uc?export=download&id=1e1BwtHXHQRvz1jJs0ArCIXojM4gLfbpG"
-class="btn">Download Resume</a>
+    <div class="icons">
+        <a href="tel:9666387322"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:karthikmaroju479@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/karthik-maroju"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/karthik-maroju"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <a href="https://drive.google.com/uc?export=download&id=1e1BwtHXHQRvz1jJs0ArCIXojM4gLfbpG"
+    class="btn">Download Resume</a>
 </section>
 
-<!-- SKILLS -->
-<section class="skills">
-<h2>Technical Skills</h2>
-
-<div class="skill">
-<p>Python</p>
-<div class="bar"><div class="progress" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<p>Machine Learning</p>
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<p>Web Development</p>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
+<section class="projects">
 <h2>Projects</h2>
 
-<div class="project-card" onclick="openModal('modal1')">
-Object Detection - YOLOv5
+<div class="card" onclick="openModal('m1')">
+<i class="fa-solid fa-robot"></i>
+<h3>YOLOv5 Detection</h3>
 </div>
 
-<div class="project-card" onclick="openModal('modal2')">
-Telegram AI ChatBot
+<div class="card" onclick="openModal('m2')">
+<i class="fa-brands fa-telegram"></i>
+<h3>Telegram AI Bot</h3>
 </div>
 
-<div class="project-card" onclick="openModal('modal3')">
-Visual Question Answering
+<div class="card" onclick="openModal('m3')">
+<i class="fa-solid fa-brain"></i>
+<h3>VQA Model</h3>
 </div>
+
 </section>
 
 <!-- MODALS -->
-<div id="modal1" class="modal">
-<div class="modal-content">
-<span onclick="closeModal('modal1')">&times;</span>
+<div id="m1" class="modal">
+<div class="modal-box">
+<span onclick="closeModal('m1')">&times;</span>
 <h3>YOLOv5 Object Detection</h3>
-<p>Built using Roboflow & pretrained YOLOv5 model for real-time detection.</p>
+<p>Real-time object detection using Roboflow + YOLOv5 pretrained model.</p>
 </div>
 </div>
 
-<div id="modal2" class="modal">
-<div class="modal-content">
-<span onclick="closeModal('modal2')">&times;</span>
+<div id="m2" class="modal">
+<div class="modal-box">
+<span onclick="closeModal('m2')">&times;</span>
 <h3>Telegram AI ChatBot</h3>
-<p>Gemini API integrated chatbot for Q&A and smart responses.</p>
+<p>Gemini API based intelligent chatbot.</p>
 </div>
 </div>
 
-<div id="modal3" class="modal">
-<div class="modal-content">
-<span onclick="closeModal('modal3')">&times;</span>
-<h3>VQA Model</h3>
-<p>Answers questions based on image inputs using deep learning.</p>
+<div id="m3" class="modal">
+<div class="modal-box">
+<span onclick="closeModal('m3')">&times;</span>
+<h3>Visual Question Answering</h3>
+<p>AI model that answers image-based questions.</p>
 </div>
 </div>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-<h2>Certifications</h2>
-
-<div class="cert-card">Google - Python</div>
-<div class="cert-card">Microsoft - AI & ML</div>
-<div class="cert-card">IBM - Data Science</div>
-<div class="cert-card">Cisco - Python Essentials</div>
-</section>
-
-<!-- CONTACT FORM -->
-<section id="contact">
-<h2>Contact Me</h2>
-
-<form id="contact-form">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
+</div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
