@@ -14,7 +14,7 @@ function login(){
     const password = document.getElementById("password").value.trim();
     const error = document.getElementById("error");
 
-    if(username === "Karthik_123" && password === "Karthik123"){
+    if(username === "karthikmaroju479@gmail.com" && password === "Karthik123"){
         error.innerText = "";
         container.classList.add("flip"); // 3D Flip animation
     }else{
